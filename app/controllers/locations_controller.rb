@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   def index
   	@vehicle = Vehicle.find_by!(unique_id: params[:vehicle_id])
     @locations = @vehicle.locations
-  	render json: @coordinates
+  	render json: @locations
   end
 
   def create
