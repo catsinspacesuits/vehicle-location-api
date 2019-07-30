@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :vehicles do
   	resources :locations
   end
+
+  resources :locations
 end

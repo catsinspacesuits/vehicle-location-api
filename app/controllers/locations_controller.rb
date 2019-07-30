@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
 
   def index
   	@vehicle = Vehicle.find_by!(unique_id: params[:vehicle_id])
-    @locations = @vehicle.locations
+    @locations = @vehicle.locations.order("at")  
   	render json: @locations
   end
 
